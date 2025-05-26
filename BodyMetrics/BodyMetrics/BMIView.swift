@@ -25,14 +25,17 @@ struct BMIView: View {
                     Text("\(Int(userHeight)) cm")
                 }
 
-                Button("Hitung BMI") {
-                    calculateBMI()
+                Section {
+                    Button("Calculate BMI") {
+                        calculateBMI()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
                 }
 
                 if let bmi = bmi {
-                    Section(header: Text("Hasil")) {
+                    Section(header: Text("Result")) {
                         Text(String(format: "BMI: %.2f", bmi))
-                        Text("Kategori: \(category)")
+                        Text("Category: \(category)")
                             .foregroundColor(.blue)
                     }
                 }
@@ -44,7 +47,7 @@ struct BMIView: View {
     func calculateBMI() {
         guard let weight = Double(weight), userHeight > 0 else {
             bmi = nil
-            category = "Input tidak valid"
+            category = "Invalid input"
             return
         }
 
@@ -64,7 +67,6 @@ struct BMIView: View {
         }
     }
 }
-
 
 #Preview {
     BMIView()
