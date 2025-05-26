@@ -13,7 +13,6 @@ struct WeightChartView: View {
     @Query(sort: \WeightEntry.date) var entries: [WeightEntry]
     @Environment(\.modelContext) private var context
 
-    // Fetch height from UserDefaults, default to 165 if not set
     let heightInCM: Double = UserDefaults.standard.double(forKey: "userHeight") == 0 ? 165 : UserDefaults.standard.double(forKey: "userHeight")
 
     @State private var showResetAlert = false

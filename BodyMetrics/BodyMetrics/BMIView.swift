@@ -23,7 +23,6 @@ struct BMIView: View {
 
                 Section(header: Text("Height in cm")) {
                     Text("\(Int(userHeight)) cm")
-                    // Kalau mau tambah tombol edit, bisa di sini arahkan ke SettingsView
                 }
 
                 Button("Hitung BMI") {

@@ -13,6 +13,6 @@ struct BodyMetricsApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: WeightEntry.self) // <-- ini penting dan sudah ada
+        .modelContainer(for: WeightEntry.self) 
     }
 }

@@ -67,7 +67,6 @@ struct ContentView: View {
         }
     }
 
-    // Dynamic title for each selected tab
     func titleForTab(_ tab: Int) -> String {
         switch tab {
         case 0: return "Log Your Weight"
